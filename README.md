@@ -1,54 +1,59 @@
-# MediCloud 1.0.0
+# MediCloud — Telehealth SaaS Landing Template
 
-MediCloud — a modern one-page landing template for telehealth / digital-health SaaS products. Built with **Vite**, **Bootstrap 5**, **Sass**, **GSAP** animations and **Tabler Icons**. Ships with hero, features, about, doctor/team, pricing, testimonials, FAQ and CTA sections — all client-side and responsive.
+A polished one-page landing-page template for a telehealth SaaS product, built with **Vite**, **Bootstrap 5**, **Sass**, **GSAP** animations and **Tabler Icons**. Includes hero, features, doctor profiles, testimonials, pricing, FAQ and CTA sections — ready to adapt into any health-tech product site.
+
+> The template source lives in the `medicloud-1.0.0/` folder. Theme design lineage: ThemeWagon / CodesCandy "MediCloud".
 
 ## Features
 
-- One-page telehealth SaaS landing template (hero, features, stats, about, doctors, pricing, testimonials, FAQ, footer)
-- Bootstrap 5 grid + utility styling with a custom Sass theme layer
-- GSAP scroll-based animations and interactive UI touches
-- Tabler Icons webfont icon set, SVG client logos, avatar imagery
-- Fully static output — no backend, no login, no build-time secrets
-- Fast Vite 6 build pipeline with cache-busted hashed assets
+- One-page marketing site for a telehealth SaaS product
+- Responsive Bootstrap 5 layout with custom Sass styling
+- GSAP-powered scroll animations and counters
+- Doctor profile cards, patient testimonials, pricing tables, FAQ accordion
+- Tabler Icons webfont set + custom SVG assets
+- Multi-page Vite build (all HTML pages under `src/`)
+- Asset pipeline with organized `assets/css`, `assets/js`, `assets/images` output
 
 ## Tech Stack
 
-- **Vite 6** — build tooling / dev server
-- **Bootstrap 5.3** + **Sass** — layout and styling
-- **GSAP 3** — scroll animations
-- **Tabler Icons** — icon set
-- Plain JavaScript (no framework)
+- **Build:** Vite 6
+- **UI:** Bootstrap 5.3, Sass, Popper.js
+- **Animation:** GSAP 3.15
+- **Icons:** Tabler Icons (JS + webfont)
 
 ## Quick Start
 
 ```bash
 cd medicloud-1.0.0
 npm install
-npm run dev      # local dev server with hot reload
-npm run build    # production build -> dist/
-npm run preview  # preview the production build
+npm run dev        # Vite dev server on :3000
+npm run build      # production build -> medicloud-1.0.0/dist/
+npm run preview    # preview the production build
 ```
 
 ## Project Structure
 
 ```
 medicloud-1.0.0/
-├── src/
-│   ├── index.html        # landing page template
-│   ├── assets/           # images, logos, avatars, favicons
-│   └── js/               # entry scripts, GSAP animation wiring
-├── vite.config.js
-└── package.json
+  vite.config.js     # Vite config (base './', root=src, multi-page)
+  package.json
+  src/
+    index.html       # landing page entry (+ other pages)
+    assets/
+      images/        # logos, avatars, illustrations, favicon pack
+      js/            # theme scripts
+      scss/          # custom styles over Bootstrap
 ```
 
 ## Deploy Notes
 
-Static build: `npm run build` outputs to `dist/` — host anywhere static files are served (Cloudflare Pages, Netlify, GitHub Pages). No environment variables required.
+- Static build: the `dist/` output is fully static (no server code). It is deployed to Cloudflare Pages (see repo homepage); any static host (GitHub Pages, Netlify) works.
+- `base: './'` in `vite.config.js` makes asset paths relative, so it works under any sub-path.
 
 ## License
 
-Template derived from the ThemeWagon MediCloud theme; see `package.json` and upstream for license terms.
+ISC. Original theme terms: ThemeWagon / CodesCandy.
 
 ---
 
-Built by [Girish Lade](https://github.com/girishlade111) · [ladestack.in](https://ladestack.in)
+Built by **Girish Lade** — https://ladestack.in
